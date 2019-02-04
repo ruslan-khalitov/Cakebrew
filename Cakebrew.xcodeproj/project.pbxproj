@@ -987,7 +987,7 @@
 				INFOPLIST_FILE = "Cakebrew/Cakebrew-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = io.scottdensmore.Cakebrew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottdensmore.Cakebrew;
 				PRODUCT_NAME = Cakebrew;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Cakebrew/Frameworks/PXSourceList.framework/Headers";
@@ -1014,7 +1014,7 @@
 				INFOPLIST_FILE = "Cakebrew/Cakebrew-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = io.scottdensmore.Cakebrew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottdensmore.Cakebrew;
 				PRODUCT_NAME = Cakebrew;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Cakebrew/Frameworks/PXSourceList.framework/Headers";
