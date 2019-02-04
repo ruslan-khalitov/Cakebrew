@@ -820,9 +820,9 @@ NSOpenSavePanelDelegate>
 - (IBAction)runHomebrewExport:(id)sender
 {
 	NSSavePanel *savePanel = [NSSavePanel savePanel];
-	[savePanel setNameFieldLabel:@"Export To:"];
-	[savePanel setPrompt:@"Export"];
-	[savePanel setNameFieldStringValue:@"Brewfile"];
+	[savePanel setNameFieldLabel:NSLocalizedString(@"Export_Export_To", nil )];
+	[savePanel setPrompt:NSLocalizedString(@"Export_Export", nil)];
+	[savePanel setNameFieldStringValue:NSLocalizedString(@"Export_Brewfile", nil)];
 	
 	[savePanel beginSheetModalForWindow:[NSApp mainWindow] completionHandler:^(NSInteger result) {
 		NSURL *fileURL = [savePanel URL];
@@ -840,9 +840,9 @@ NSOpenSavePanelDelegate>
 - (IBAction)runHomebrewImport:(id)sender
 {
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
-	[openPanel setNameFieldLabel:@"Import From:"];
-	[openPanel setPrompt:@"Import"];
-	[openPanel setNameFieldStringValue:@"Brewfile"];
+	[openPanel setNameFieldLabel:NSLocalizedString(@"Import_From", nil)];
+	[openPanel setPrompt:NSLocalizedString(@"Import_Import", nil)];
+	[openPanel setNameFieldStringValue:NSLocalizedString(@"Import_Brewfile", nil)];
 	[openPanel setAllowsMultipleSelection:NO];
 	[openPanel setCanChooseDirectories:NO];
 	[openPanel setCanChooseFiles:YES];

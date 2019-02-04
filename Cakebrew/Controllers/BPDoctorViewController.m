@@ -60,9 +60,9 @@
 	
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
 		[[BPHomebrewInterface sharedInterface] runDoctorWithReturnBlock:^(NSString *output) {
-			[self.doctorTextView performSelectorOnMainThread:@selector(setString:)
-												  withObject:[self.doctorTextView.string stringByAppendingString:output]
-											   waitUntilDone:YES];
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self.doctorTextView setString:[self.doctorTextView.string stringByAppendingString:output]];
+			});
 		}];
 		
 		dispatch_async(dispatch_get_main_queue(), ^{

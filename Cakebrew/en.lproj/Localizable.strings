@@ -104,3 +104,12 @@
 
 "Notification_Doctor" = "Homebrew Doctor";
 "Notification_Update" = "Update Homebrew";
+
+"Export_Failed" = "Export Failed";
+"Export_Export_To" = "Export To:";
+"Export_Export" = "Export";
+"Export_Brewfile" = "Brewfile";
+
+"Import_From" = "Import From:";
+"Import_Import" = "Import";
+"Import_Brewfile" = "Brewfile";

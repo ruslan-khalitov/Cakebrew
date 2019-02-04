@@ -117,7 +117,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	
 	error = nil;
 
-	path = [path URLByAppendingPathComponent:@"com.brunophilipe.Cakebrew/"];
+	path = [path URLByAppendingPathComponent:@"com.scottdensmore.Cakebrew/"];
 
 	[[NSFileManager defaultManager] createDirectoryAtPath:path.relativePath withIntermediateDirectories:YES attributes:nil error:&error];
 

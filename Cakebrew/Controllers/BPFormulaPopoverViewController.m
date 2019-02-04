@@ -59,7 +59,7 @@
 			[self.timedDispatch scheduleDispatchAfterTimeInterval:0.3
 														  inQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
 														  ofBlock:^{
-															  [_formula setNeedsInformation:YES];
+															  [self->_formula setNeedsInformation:YES];
 														  }];
 		}
 		break;

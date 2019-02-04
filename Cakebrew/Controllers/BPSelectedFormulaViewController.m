@@ -81,9 +81,15 @@
 	});
 }
 
+__attribute__((annotate("returns_localized_nsstring")))
+static inline NSString *LocalizationNotNeeded(NSString *s)
+{
+	return s;
+}
+
 - (void)displayInformationForFormulae
 {
-	static NSString *emptyString = @"--";
+	NSString *emptyString = LocalizationNotNeeded(@"--");
 	
 	NSString *multipleString = NSLocalizedString(@"Info_View_Multiple_Values", nil);
 	
