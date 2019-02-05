@@ -73,8 +73,9 @@
 
     // Set credits
     if(!self.appCredits) {
-        NSString *creditsPath = [[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"rtf"];
-        self.appCredits = [[NSAttributedString alloc] initWithPath:creditsPath documentAttributes:nil];
+		NSURL *creditsURL = [[NSBundle mainBundle] URLForResource:@"Credits" withExtension:@"rtf"];
+		NSDictionary *const options = @{NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType};
+		self.appCredits = [[NSAttributedString alloc] initWithURL:creditsURL options:options documentAttributes:nil error:nil];
     }
 
     // Disable editing

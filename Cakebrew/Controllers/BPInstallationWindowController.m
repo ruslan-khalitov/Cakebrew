@@ -115,20 +115,12 @@
 	operationWindowController.completionBlock = completionBlock;
 	[BPAppDelegateRef setRunningBackgroundTask:YES];
 	
-	
 	NSWindow *operationWindow = operationWindowController.window;
 	
-	if ([[NSApp mainWindow] respondsToSelector:@selector(beginSheet:completionHandler:)]) {
-		[[NSApp mainWindow] beginSheet:operationWindow completionHandler:^(NSModalResponse returnCode) {
-			[operationWindowController cleanupAfterTask];
-		}];
-	} else {
-		[[NSApplication sharedApplication] beginSheet:operationWindow
-									   modalForWindow:[NSApp mainWindow]
-										modalDelegate:operationWindowController
-									   didEndSelector:@selector(windowOperationSheetDidEnd:returnCode:contextInfo:)
-										  contextInfo:NULL];
-	}
+	[[NSApp mainWindow] beginSheet:operationWindow completionHandler:^(NSModalResponse returnCode) {
+		[operationWindowController cleanupAfterTask];
+	}];
+	
 	[operationWindowController executeInstallation];
 	
 	return operationWindowController;

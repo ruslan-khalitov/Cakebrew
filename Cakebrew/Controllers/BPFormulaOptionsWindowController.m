@@ -53,7 +53,7 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 	} else {
 		[self.userHelpLabel setStringValue:NSLocalizedString(@"Formula_Options_NoOptions", nil)];
 	}
-	[self.optionDetailsTextField accessibilitySetOverrideValue:NSLocalizedString(@"Formula_Options_VoiceOver_Description", nil) forAttribute:NSAccessibilityDescriptionAttribute];
+	[self.optionDetailsTextField setAccessibilityLabel:NSLocalizedString(@"Formula_Options_VoiceOver_Description", nil)];
 	
 	//load array controller with array of mutable dictionaries with options
 	[self.formulasArrayController addObjects:self.availableOptions];
@@ -61,7 +61,7 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 	self.formulaNameLabel.stringValue = self.formula.name;
 	
 	[self.formulaOptionsTableView reloadData];
-	[self.formulaOptionsTableView accessibilitySetOverrideValue:NSLocalizedString(@"Formula_Options_VoiceOver", nil) forAttribute:NSAccessibilityDescriptionAttribute];
+	[self.optionDetailsTextField setAccessibilityLabel:NSLocalizedString(@"Formula_Options_VoiceOver", nil)];
 }
 
 + (BPFormulaOptionsWindowController *)runFormula:(BPFormula *)formula withCompletionBlock:(InstalWithOptionsBlock_t)completionBlock
@@ -101,25 +101,16 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 			
 		}];
 	} else {
-		[[NSApplication sharedApplication] beginSheet:formulaWindow
-									   modalForWindow:[NSApp mainWindow]
-										modalDelegate:formulaOptionsWindowController
-									   didEndSelector:@selector(windowOperationSheetDidEnd:returnCode:contextInfo:)
-										  contextInfo:NULL];
+		[[NSApp mainWindow] beginSheet:formulaWindow completionHandler:^(NSModalResponse returnCode) {
+			if(returnCode == NSModalResponseStop) {
+				NSArray *options = [formulaOptionsWindowController allSelectedOptions];
+				formulaOptionsWindowController.installWithOptionsBlock(options);
+			} else {
+				[BPAppDelegateRef setRunningBackgroundTask:NO];
+			}
+		}];
 	}
 	return formulaOptionsWindowController;
-}
-
-
-- (void)windowOperationSheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	[sheet orderOut:self];
-	
-	if(returnCode == NSModalResponseStop) {
-		NSArray *options = [self allSelectedOptions];
-		self.installWithOptionsBlock(options);
-	} else {
-		[BPAppDelegateRef setRunningBackgroundTask:NO];
-	}
 }
 
 /*
@@ -142,17 +133,17 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 }
 
 - (IBAction)install:(id)sender {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Generic_Attention", nil)
-									 defaultButton:NSLocalizedString(@"Generic_Yes", nil)
-								   alternateButton:NSLocalizedString(@"Generic_Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"Formula_Options_Confirmation", nil), self.formula.name];
+	NSAlert *alert = [[NSAlert alloc] init];
+	[alert setMessageText:NSLocalizedString(@"Generic_Attention", nil)];
+	[alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"Confirmation_Install_Formula", nil), self.formula.name]];
+	[alert addButtonWithTitle:NSLocalizedString(@"Generic_Yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Generic_Cancel", nil)];
 	[alert.window setTitle:NSLocalizedString(@"Cakebrew", nil)];
 	
 	
 	NSInteger returnValue = [alert runModal];
 	NSInteger modalResponse = NSModalResponseStop;
-	if (returnValue == NSAlertDefaultReturn) {
+	if (returnValue == NSAlertFirstButtonReturn) {
 		
 	} else {
 		modalResponse = NSModalResponseAbort;
@@ -168,8 +159,9 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 
 -(void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	if ([tableColumn.identifier isEqualToString:kFormulaOptionsTitleColumnId])
-		[cell accessibilitySetOverrideValue:[[_formulasArrayController.arrangedObjects objectAtIndex:row] valueForKey:kFormulaOptionDescription] forAttribute:NSAccessibilityHelpAttribute];
+	if ([tableColumn.identifier isEqualToString:kFormulaOptionsTitleColumnId]) {
+		[cell setAccessibilityLabel:[[_formulasArrayController.arrangedObjects objectAtIndex:row] valueForKey:kFormulaOptionDescription]];
+	}
 }
 
 -(NSString*)tableView:(NSTableView *)tableView toolTipForCell:(NSCell *)cell rect:(NSRectPointer)rect tableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row mouseLocation:(NSPoint)mouseLocation

@@ -1,4 +1,4 @@
-platform :osx, '10.8'
+platform :osx, '10.12'
 
 target 'Cakebrew' do
   pod 'AppCenter'
