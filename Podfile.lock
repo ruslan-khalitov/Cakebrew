@@ -1,0 +1,30 @@
+PODS:
+  - AppCenter (1.13.0):
+    - AppCenter/Analytics (= 1.13.0)
+    - AppCenter/Crashes (= 1.13.0)
+  - AppCenter/Analytics (1.13.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.13.0)
+  - AppCenter/Crashes (1.13.0):
+    - AppCenter/Core
+  - Keys (1.0.1)
+
+DEPENDENCIES:
+  - AppCenter
+  - Keys (from `Pods/CocoaPodsKeys`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AppCenter
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  AppCenter: a70408f15de23f925001bfc7b7473094a009a4eb
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+
+PODFILE CHECKSUM: 73bbb8ae032ace6699a6a86545c6f688278511c6
+
+COCOAPODS: 1.5.3

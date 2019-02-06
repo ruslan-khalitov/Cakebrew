@@ -51,6 +51,7 @@
 		15D5BEF218EBB3FB001DDED7 /* label.icns in Resources */ = {isa = PBXBuildFile; fileRef = 15D5BEEF18EBB3FB001DDED7 /* label.icns */; };
 		15D5BEF318EBB3FB001DDED7 /* plus.icns in Resources */ = {isa = PBXBuildFile; fileRef = 15D5BEF018EBB3FB001DDED7 /* plus.icns */; };
 		15D5BEF518EBB430001DDED7 /* search.icns in Resources */ = {isa = PBXBuildFile; fileRef = 15D5BEF418EBB430001DDED7 /* search.icns */; };
+		1B9FDBC74A1EF1FF82812432 /* libPods-CakebrewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E00E9CC38690CB40B61261 /* libPods-CakebrewTests.a */; };
 		1FE4FE59148E4CDD008EDE8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4FE58148E4CDD008EDE8B /* Cocoa.framework */; };
 		1FE4FE63148E4CDD008EDE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FE4FE61148E4CDD008EDE8B /* InfoPlist.strings */; };
 		1FE4FE65148E4CDD008EDE8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE64148E4CDD008EDE8B /* main.m */; };
@@ -63,7 +64,6 @@
 		D23620E11B8B3094006D293D /* BPTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D23620E01B8B3094006D293D /* BPTask.m */; };
 		D2682D011B8532B0003DE3D8 /* BPHomebrewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1570BA3518EE0A66001C3C5C /* BPHomebrewManager.m */; };
 		D2682D021B8532B6003DE3D8 /* BPHomebrewInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE76148E4D43008EDE8B /* BPHomebrewInterface.m */; };
-		D2682D031B8535BD003DE3D8 /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE6B148E4CDD008EDE8B /* BPAppDelegate.m */; };
 		D2682D041B853664003DE3D8 /* DCOAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2CFA918F202B300B6D9F1 /* DCOAboutWindowController.m */; };
 		D2A3A82D1B8C9F5200D05469 /* BPStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3A82A1B8C9F5200D05469 /* BPStyle.m */; };
 		D2A3A82E1B8C9F5200D05469 /* BPStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3A82A1B8C9F5200D05469 /* BPStyle.m */; };
@@ -87,6 +87,7 @@
 		D2C4278B1B8E055B001C1F80 /* BPDisabledView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C427881B8E055B001C1F80 /* BPDisabledView.m */; };
 		D2CC8CA71B90F04C00F763DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CC8CA61B90F04C00F763DF /* Security.framework */; };
 		D2F732F119190B75002B2512 /* NSString+URLValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F732F019190B75002B2512 /* NSString+URLValidation.m */; };
+		EB3AFD1AD21BF548E7DEBBD4 /* libPods-Cakebrew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B48F507D4EDF50C7A3B7E17 /* libPods-Cakebrew.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -212,6 +213,9 @@
 		1FE4FE6B148E4CDD008EDE8B /* BPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPAppDelegate.m; sourceTree = "<group>"; };
 		1FE4FE75148E4D43008EDE8B /* BPHomebrewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPHomebrewInterface.h; sourceTree = "<group>"; };
 		1FE4FE76148E4D43008EDE8B /* BPHomebrewInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPHomebrewInterface.m; sourceTree = "<group>"; };
+		3BD687601160EDDED2F5BE52 /* Pods-CakebrewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CakebrewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CakebrewTests/Pods-CakebrewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B48F507D4EDF50C7A3B7E17 /* libPods-Cakebrew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cakebrew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E00E9CC38690CB40B61261 /* libPods-CakebrewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CakebrewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D212A5871B853069003000ED /* BPFormulaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPFormulaTests.m; sourceTree = "<group>"; };
 		D23620DF1B8B3094006D293D /* BPTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTask.h; sourceTree = "<group>"; };
 		D23620E01B8B3094006D293D /* BPTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTask.m; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 		D2CC8CA61B90F04C00F763DF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D2F732EF19190B75002B2512 /* NSString+URLValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLValidation.h"; sourceTree = "<group>"; };
 		D2F732F019190B75002B2512 /* NSString+URLValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLValidation.m"; sourceTree = "<group>"; };
+		D9A621E9D42F6F0F157FFC4C /* Pods-Cakebrew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cakebrew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cakebrew/Pods-Cakebrew.debug.xcconfig"; sourceTree = "<group>"; };
+		DDAE4001D666A9B30562C9E8 /* Pods-CakebrewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CakebrewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CakebrewTests/Pods-CakebrewTests.release.xcconfig"; sourceTree = "<group>"; };
 		F752F54A1C79875400C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Loading.strings; sourceTree = "<group>"; };
 		F752F54B1C79875400C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BPFormulaOptionsWindow.strings; sourceTree = "<group>"; };
 		F752F54C1C79875400C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BPSelectedFormula.strings; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 		F752F5541C79875500C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/DCOAboutWindow.strings; sourceTree = "<group>"; };
 		F752F5551C79875500C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BPDoctorView.strings; sourceTree = "<group>"; };
 		F752F5561C79875500C0DEFE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BPBundleWindow.strings; sourceTree = "<group>"; };
+		FE5946E25DC90509AFCA22D4 /* Pods-Cakebrew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cakebrew.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cakebrew/Pods-Cakebrew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +280,7 @@
 				1FE4FE59148E4CDD008EDE8B /* Cocoa.framework in Frameworks */,
 				158370B918F2471500176C9C /* PXSourceList.framework in Frameworks */,
 				1570EFAF1B2B91170075453A /* Sparkle.framework in Frameworks */,
+				EB3AFD1AD21BF548E7DEBBD4 /* libPods-Cakebrew.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +289,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				1594D13C1B8A6D1A00F764FA /* QuartzCore.framework in Frameworks */,
+				1B9FDBC74A1EF1FF82812432 /* libPods-CakebrewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B78C8989553C7A9A5C95E13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9A621E9D42F6F0F157FFC4C /* Pods-Cakebrew.debug.xcconfig */,
+				FE5946E25DC90509AFCA22D4 /* Pods-Cakebrew.release.xcconfig */,
+				3BD687601160EDDED2F5BE52 /* Pods-CakebrewTests.debug.xcconfig */,
+				DDAE4001D666A9B30562C9E8 /* Pods-CakebrewTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1540FA3618ED099F00334A5C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +435,7 @@
 				D261C9C11B852FA300409803 /* CakebrewTests */,
 				1FE4FE57148E4CDD008EDE8B /* Frameworks */,
 				1FE4FE55148E4CDD008EDE8B /* Products */,
+				0B78C8989553C7A9A5C95E13 /* Pods */,
 			);
 			sourceTree = "<group>";
 			tabWidth = 4;
@@ -438,6 +459,8 @@
 				15D2CFAC18F202D000B6D9F1 /* QuartzCore.framework */,
 				1FE4FE58148E4CDD008EDE8B /* Cocoa.framework */,
 				1FE4FE5A148E4CDD008EDE8B /* Other Frameworks */,
+				4B48F507D4EDF50C7A3B7E17 /* libPods-Cakebrew.a */,
+				C8E00E9CC38690CB40B61261 /* libPods-CakebrewTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -534,6 +557,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FE4FE72148E4CDD008EDE8B /* Build configuration list for PBXNativeTarget "Cakebrew" */;
 			buildPhases = (
+				A549BACD649B5633FDD1B838 /* [CP] Check Pods Manifest.lock */,
 				1FE4FE50148E4CDD008EDE8B /* Sources */,
 				1FE4FE51148E4CDD008EDE8B /* Frameworks */,
 				1FE4FE52148E4CDD008EDE8B /* Resources */,
@@ -553,6 +577,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D261C9CA1B852FA300409803 /* Build configuration list for PBXNativeTarget "CakebrewTests" */;
 			buildPhases = (
+				FF421CA65179F52E17E04D7A /* [CP] Check Pods Manifest.lock */,
 				D261C9BC1B852FA300409803 /* Sources */,
 				D261C9BD1B852FA300409803 /* Frameworks */,
 				D261C9BE1B852FA300409803 /* Resources */,
@@ -673,6 +698,50 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"Cakebrew/BumpBuild.sh\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
+		A549BACD649B5633FDD1B838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cakebrew-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF421CA65179F52E17E04D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CakebrewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -719,7 +788,6 @@
 				D2682D011B8532B0003DE3D8 /* BPHomebrewManager.m in Sources */,
 				D228335A1BA71B9900E44C82 /* BPTask.m in Sources */,
 				D212A5891B853132003000ED /* BPFormula.m in Sources */,
-				D2682D031B8535BD003DE3D8 /* BPAppDelegate.m in Sources */,
 				D2BBAB4E1B863FAB00F21332 /* BPFormulaOption.m in Sources */,
 				D2A3A8301B8C9F5200D05469 /* BPUtilities.m in Sources */,
 				D2682D041B853664003DE3D8 /* DCOAboutWindowController.m in Sources */,
@@ -985,6 +1053,7 @@
 		};
 		1FE4FE73148E4CDD008EDE8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A621E9D42F6F0F157FFC4C /* Pods-Cakebrew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1013,6 +1082,7 @@
 		};
 		1FE4FE74148E4CDD008EDE8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5946E25DC90509AFCA22D4 /* Pods-Cakebrew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1040,6 +1110,7 @@
 		};
 		D261C9C81B852FA300409803 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD687601160EDDED2F5BE52 /* Pods-CakebrewTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1063,7 +1134,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = CakebrewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hrubasko.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1072,6 +1143,7 @@
 		};
 		D261C9C91B852FA300409803 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDAE4001D666A9B30562C9E8 /* Pods-CakebrewTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1092,7 +1164,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = CakebrewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hrubasko.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

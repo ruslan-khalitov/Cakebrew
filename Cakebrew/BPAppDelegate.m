@@ -19,6 +19,11 @@
 //	along with this program.	If not, see <http://www.gnu.org/licenses/>.
 //
 
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
+
+#import <Keys/CakebrewKeys.h>
 #import "BPHomebrewManager.h"
 #import "DCOAboutWindowController.h"
 #import "BPAppDelegate.h"
@@ -53,6 +58,19 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 {	
 	[self setupSignalHandler];
 	
+	CakebrewKeys *keys = [[CakebrewKeys alloc] init];
+	
+	if ([keys.appCenterProd isEqualToString:@"No"]) {
+		[MSAppCenter setLogUrl:keys.appCenterLogURL];
+//		MSDistribute.setApiUrl(keys.appCenterDistributeApi);
+//		MSDistribute.setInstallUrl(keys.appCenterDistributeInstallUrl);
+	}
+	
+	[MSAppCenter start:keys.appCenterSecret withServices:@[
+														   [MSAnalytics class],
+														   [MSCrashes class]
+														   ]];
+	
 	[[BPHomebrewManager sharedManager] reloadFromInterfaceRebuildingCache:NO];
 	
 	[[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
@@ -66,7 +84,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	}
 	
 	[self cleanupTaskAlerts];
-
+	
 	return YES;
 }
 
@@ -90,17 +108,17 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 {
 	NSError *error = nil;
 	NSURL *path = [[NSFileManager defaultManager] URLForDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:&error];
-
+	
 	if (error) return nil;
 	error = nil;
-
+	
 	path = [path URLByAppendingPathComponent:@"Cakebrew/"];
-
+	
 	[[NSFileManager defaultManager] createDirectoryAtPath:path.relativePath withIntermediateDirectories:YES attributes:nil error:&error];
-
+	
 	if (error) return nil;
 	error = nil;
-
+	
 	return path;
 }
 
@@ -108,7 +126,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 {
 	NSError *error = nil;
 	NSURL *path = [[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:&error];
-
+	
 	if (error)
 	{
 		NSLog(@"Error finding caches directory: %@", path);
@@ -116,11 +134,11 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	}
 	
 	error = nil;
-
+	
 	path = [path URLByAppendingPathComponent:@"com.scottdensmore.Cakebrew/"];
-
+	
 	[[NSFileManager defaultManager] createDirectoryAtPath:path.relativePath withIntermediateDirectories:YES attributes:nil error:&error];
-
+	
 	if (error)
 	{
 		NSLog(@"Error creating Cakebrew cache directory: %@", path);
@@ -128,7 +146,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	}
 	
 	error = nil;
-
+	
 	return path;
 }
 
@@ -141,7 +159,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 		[alert setInformativeText:NSLocalizedString(@"Message_BGTask_Body", nil)];
 		[alert addButtonWithTitle:NSLocalizedString(@"Generic_OK", nil)];
 	}
-
+	
 	[alert runModal];
 }
 
@@ -197,7 +215,7 @@ void signalHandler(int sig) {
 		// Force Quit
 		[[BPHomebrewManager sharedManager] cleanUp];
 	}
-
+	
 	signal(sig, SIG_DFL);
 }
 
