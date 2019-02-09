@@ -22,6 +22,7 @@
 #import "BPHomebrewManager.h"
 #import "BPHomebrewInterface.h"
 #import "BPAppDelegate.h"
+@import AppCenterAnalytics;
 
 NSString *const kBPCacheLastUpdateKey = @"BPCacheLastUpdateKey";
 NSString *const kBPCacheDataKey	= @"BPCacheDataKey";
@@ -181,6 +182,8 @@ NSString *const kBPCacheDataKey	= @"BPCacheDataKey";
 		}
 		else
 		{
+			[MSAnalytics trackEvent:@"Store All Formula Caches"
+					 withProperties:@{ @"result" : @"Could not store cache file. BPAppDelegate function returned nil!"} flags:MSFlagsPersistenceCritical];
 			NSLog(@"Could not store cache file. BPAppDelegate function returned nil!");
 		}
 	}
