@@ -7,7 +7,6 @@
 //
 
 #import "BPFormulaPopoverViewController.h"
-#import "BPFormula.h"
 #import "BPHomebrewInterface.h"
 #import "BPTimedDispatch.h"
 #import "BPStyle.h"

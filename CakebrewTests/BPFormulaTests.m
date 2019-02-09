@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import "BPFormula.h"
-#import "BPHomebrewInterface.h"
 
 @interface BPFormulaDataProvider : NSObject <BPFormulaDataProvider>
 - (NSString *)informationForFormulaName:(NSString *)name;

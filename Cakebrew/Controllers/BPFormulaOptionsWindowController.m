@@ -125,11 +125,7 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 
 - (IBAction)cancel:(id)sender {
 	NSWindow *mainWindow = [NSApp mainWindow];
-	if ([mainWindow respondsToSelector:@selector(endSheet:returnCode:)]) {
-		[mainWindow endSheet:self.window returnCode:NSModalResponseAbort];
-	} else {
-		[[NSApplication sharedApplication] endSheet:self.window returnCode:NSModalResponseAbort];
-	}
+	[mainWindow endSheet:self.window returnCode:NSModalResponseAbort];
 }
 
 - (IBAction)install:(id)sender {
@@ -150,11 +146,7 @@ static NSString * const kFormulaOptionsTitleColumnId = @"title";
 	}
 	
 	NSWindow *mainWindow = [NSApp mainWindow];
-	if ([mainWindow respondsToSelector:@selector(endSheet:returnCode:)]) {
-		[mainWindow endSheet:self.window returnCode:modalResponse];
-	} else {
-		[[NSApplication sharedApplication] endSheet:self.window returnCode:modalResponse];
-	}
+	[mainWindow endSheet:self.window returnCode:modalResponse];
 }
 
 -(void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row

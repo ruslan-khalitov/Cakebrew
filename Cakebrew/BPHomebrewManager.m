@@ -26,8 +26,6 @@
 NSString *const kBPCacheLastUpdateKey = @"BPCacheLastUpdateKey";
 NSString *const kBPCacheDataKey	= @"BPCacheDataKey";
 
-#define kBP_SECONDS_IN_A_DAY 86400
-
 @interface BPHomebrewManager () <BPHomebrewInterfaceDelegate>
 
 @end

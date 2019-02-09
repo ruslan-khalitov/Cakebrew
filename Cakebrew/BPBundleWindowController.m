@@ -27,7 +27,6 @@
 @property (strong) IBOutlet NSButton *buttonClose;
 
 @property (nonatomic, copy) void (^windowLoadedBlock)(void);
-@property (nonatomic, copy) void (^operationBlock)(void);
 
 @property (strong) NSMutableString *importOutputString;
 
@@ -157,15 +156,7 @@
 - (IBAction)didClickClose:(id)sender
 {
 	NSWindow *mainWindow = [NSApp mainWindow];
-	
-	if ([mainWindow respondsToSelector:@selector(endSheet:)])
-	{
-		[mainWindow endSheet:self.window];
-	}
-	else
-	{
-		[[NSApplication sharedApplication] endSheet:self.window];
-	}
+	[mainWindow endSheet:self.window];
 }
 
 @end

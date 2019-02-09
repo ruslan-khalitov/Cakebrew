@@ -20,9 +20,7 @@
 //
 
 #import "BPHomebrewViewController.h"
-#import "BPFormula.h"
 #import "BPHomebrewManager.h"
-#import "BPHomebrewInterface.h"
 #import "BPFormulaOptionsWindowController.h"
 #import "BPInstallationWindowController.h"
 #import "BPUpdateViewController.h"
@@ -31,7 +29,6 @@
 #import "BPSelectedFormulaViewController.h"
 #import "BPToolbar.h"
 #import "BPAppDelegate.h"
-#import "BPStyle.h"
 #import "BPLoadingView.h"
 #import "BPDisabledView.h"
 #import "BPBundleWindowController.h"

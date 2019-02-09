@@ -20,8 +20,6 @@
 //
 
 #import "BPInstallationWindowController.h"
-#import "BPHomebrewInterface.h"
-#import "BPHomebrewManager.h"
 #import "BPStyle.h"
 #import "BPAppDelegate.h"
 
@@ -153,7 +151,7 @@
 	[self.progressIndicator startAnimation:nil];
 	
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-		NSString __block *outputValue;
+		__block NSString *outputValue = nil;
 		__weak BPInstallationWindowController *weakSelf = self;
 		
 		void (^displayTerminalOutput)(NSString *outputValue) = ^(NSString *output) {
@@ -246,15 +244,7 @@
 	self.recordTextView.string = @"";
 	
 	NSWindow *mainWindow = [NSApp mainWindow];
-	
-	if ([mainWindow respondsToSelector:@selector(endSheet:)])
-	{
-		[mainWindow endSheet:self.window];
-	}
-	else
-	{
-		[[NSApplication sharedApplication] endSheet:self.window];
-	}
+	[mainWindow endSheet:self.window];
 }
 
 @end

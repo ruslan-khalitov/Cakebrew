@@ -31,14 +31,12 @@ NSString *const kDidEndBackgroundActivityNotification	= @"DidEndBackgroundActivi
 	id activity;
 	NSPipe *outputPipe;
 	NSPipe *errorPipe;
-	NSPipe *inputPipe;
 	NSFileHandle *outputFileHandle;
 	NSFileHandle *errorFileHandle;
 	NSMutableData *outputData;
 	NSMutableData *errorData;
 	NSObject *outputHandlerObserver;
 	NSObject *errorHandlerObserver;
-	void (^operationUpdateBlock)(NSString*);
 }
 
 @property (strong) NSTask *task;

@@ -154,7 +154,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 {
 	static NSAlert *alert= nil;
 	if (!alert) {
-		NSAlert *alert = [[NSAlert alloc] init];
+		alert = [[NSAlert alloc] init];
 		[alert setMessageText:NSLocalizedString(@"Message_BGTask_Title", nil)];
 		[alert setInformativeText:NSLocalizedString(@"Message_BGTask_Body", nil)];
 		[alert addButtonWithTitle:NSLocalizedString(@"Generic_OK", nil)];

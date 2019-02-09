@@ -20,7 +20,6 @@
 //
 
 #import "BPFormula.h"
-#import "BPFormulaOption.h"
 #import "BPHomebrewManager.h"
 #import "BPHomebrewInterface.h"
 

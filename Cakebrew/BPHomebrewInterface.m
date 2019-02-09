@@ -160,7 +160,7 @@ static NSString *cakebrewOutputIdentifier = @"+++++Cakebrew+++++";
 		static NSAlert *alert = nil;
 		if (!alert)
 		{
-			NSAlert *alert = [[NSAlert alloc] init];
+			alert = [[NSAlert alloc] init];
 			[alert setMessageText:NSLocalizedString(@"Message_Shell_Invalid_Title", nil)];
 			[alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"Message_Shell_Invalid_Body", nil), userShell]];
 			[alert addButtonWithTitle:NSLocalizedString(@"Generic_OK", nil)];
