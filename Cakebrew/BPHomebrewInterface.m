@@ -21,6 +21,7 @@
 
 #import "BPHomebrewInterface.h"
 #import "BPTask.h"
+@import AppCenterAnalytics;
 
 #define kDEBUG_WARNING @"\
 User Shell: %@\n\
@@ -407,6 +408,7 @@ static NSString *cakebrewOutputIdentifier = @"+++++Cakebrew+++++";
 
 - (BOOL)uninstallFormula:(NSString*)formula withReturnBlock:(void (^)(NSString*output))block
 {
+	[MSAnalytics trackEvent:@"uninstall" withProperties:@{ @"formula" : formula }];
 	BOOL val = [self performBrewCommandWithArguments:@[@"uninstall", formula] dataReturnBlock:block];
 	[self sendDelegateFormulaeUpdatedCall];
 	return val;
@@ -414,6 +416,7 @@ static NSString *cakebrewOutputIdentifier = @"+++++Cakebrew+++++";
 
 - (BOOL)tapRepository:(NSString *)repository withReturnsBlock:(void (^)(NSString *))block
 {
+	[MSAnalytics trackEvent:@"tap" withProperties:@{ @"repository" : repository }];
 	BOOL val = [self performBrewCommandWithArguments:@[@"tap", repository] dataReturnBlock:block];
 	[self sendDelegateFormulaeUpdatedCall];
 	return val;
@@ -421,6 +424,7 @@ static NSString *cakebrewOutputIdentifier = @"+++++Cakebrew+++++";
 
 - (BOOL)untapRepository:(NSString *)repository withReturnsBlock:(void (^)(NSString *))block
 {
+	[MSAnalytics trackEvent:@"untap" withProperties:@{ @"repository" : repository }];
 	BOOL val = [self performBrewCommandWithArguments:@[@"untap", repository] dataReturnBlock:block];
 	[self sendDelegateFormulaeUpdatedCall];
 	return val;
@@ -428,11 +432,13 @@ static NSString *cakebrewOutputIdentifier = @"+++++Cakebrew+++++";
 
 - (BOOL)runCleanupWithReturnBlock:(void (^)(NSString*output))block
 {
+	[MSAnalytics trackEvent:@"Run Doctor"];
 	return [self performBrewCommandWithArguments:@[@"cleanup"] dataReturnBlock:block];;
 }
 
 - (BOOL)runDoctorWithReturnBlock:(void (^)(NSString*output))block
 {
+	[MSAnalytics trackEvent:@"Run Doctor"];
 	BOOL val = [self performBrewCommandWithArguments:@[@"doctor"] dataReturnBlock:block];
 	[self sendDelegateFormulaeUpdatedCall];
 	return val;
