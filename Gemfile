@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'cocoapods', '~> 1.5.3'
-gem 'cocoapods-keys', '~> 2.0.2'
+gem 'cocoapods', '~> 1.6.1'
+gem 'cocoapods-keys', '~> 2.1.0'

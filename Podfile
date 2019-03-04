@@ -4,6 +4,7 @@ target 'Cakebrew' do
   pod 'AppCenter'
   pod 'DCOAboutWindow', '~> 0.3.1'
   pod 'PXSourceList', '~> 2.0.7', :inhibit_warnings => true
+  pod 'Sparkle', '~> 1.21.2'
 
   target 'CakebrewTests' do
     inherit! :search_paths

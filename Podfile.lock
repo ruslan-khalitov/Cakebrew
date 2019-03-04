@@ -1,23 +1,25 @@
 PODS:
-  - AppCenter (1.13.0):
-    - AppCenter/Analytics (= 1.13.0)
-    - AppCenter/Crashes (= 1.13.0)
-  - AppCenter/Analytics (1.13.0):
+  - AppCenter (1.13.2):
+    - AppCenter/Analytics (= 1.13.2)
+    - AppCenter/Crashes (= 1.13.2)
+  - AppCenter/Analytics (1.13.2):
     - AppCenter/Core
-  - AppCenter/Core (1.13.0)
-  - AppCenter/Crashes (1.13.0):
+  - AppCenter/Core (1.13.2)
+  - AppCenter/Crashes (1.13.2):
     - AppCenter/Core
   - DCOAboutWindow (0.3.1):
     - DCOTransparentScroller
   - DCOTransparentScroller (0.0.2)
   - Keys (1.0.1)
   - PXSourceList (2.0.7)
+  - Sparkle (1.21.3)
 
 DEPENDENCIES:
   - AppCenter
   - DCOAboutWindow (~> 0.3.1)
   - Keys (from `Pods/CocoaPodsKeys`)
   - PXSourceList (~> 2.0.7)
+  - Sparkle (~> 1.21.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,18 +27,20 @@ SPEC REPOS:
     - DCOAboutWindow
     - DCOTransparentScroller
     - PXSourceList
+    - Sparkle
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
-  AppCenter: a70408f15de23f925001bfc7b7473094a009a4eb
+  AppCenter: bce7fe1098e8e8aeb70aaae1898600534069f549
   DCOAboutWindow: b4a293903fd70a0c962b9bced1264d45e19ade78
   DCOTransparentScroller: 1ff1c24a51536d2bed21b8c73cf020205d02297f
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   PXSourceList: 8e37978a5db6c8d8d255f8913603bcea322c6445
+  Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
 
-PODFILE CHECKSUM: 8a7d12f624b2939a725e41afa08847520b65e4e4
+PODFILE CHECKSUM: 0ca3293167ce352065b4398c530c62d07701a90f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
