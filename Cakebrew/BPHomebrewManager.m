@@ -183,7 +183,7 @@ NSString *const kBPCacheDataKey	= @"BPCacheDataKey";
 		else
 		{
 			[MSAnalytics trackEvent:@"Store All Formula Caches"
-					 withProperties:@{ @"result" : @"Could not store cache file. BPAppDelegate function returned nil!"} flags:MSFlagsPersistenceCritical];
+					 withProperties:@{ @"result" : @"Could not store cache file. BPAppDelegate function returned nil!"} flags:MSFlagsCritical];
 			NSLog(@"Could not store cache file. BPAppDelegate function returned nil!");
 		}
 	}

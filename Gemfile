@@ -2,5 +2,6 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'cocoapods', '~> 1.6.1'
+gem 'cocoapods', '~> 1.8.4'
 gem 'cocoapods-keys', '~> 2.1.0'
+gem 'solargraph'

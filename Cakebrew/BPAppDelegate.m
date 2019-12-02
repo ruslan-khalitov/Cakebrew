@@ -131,7 +131,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	{
 		NSLog(@"Error finding caches directory: %@", path);
 		[MSAnalytics trackEvent:@"Error finding caches directory"
-				 withProperties:@{ @"path" : path } flags:MSFlagsPersistenceCritical];
+				 withProperties:@{ @"path" : [path absoluteString] } flags:MSFlagsCritical];
 		return nil;
 	}
 	
@@ -145,7 +145,7 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	{
 		NSLog(@"Error creating Cakebrew cache directory: %@", path);
 		[MSAnalytics trackEvent:@"Error creating Cakebrew cache directory"
-				 withProperties:@{ @"path" : path } flags:MSFlagsPersistenceCritical];
+				 withProperties:@{ @"path" : [path absoluteString] } flags:MSFlagsCritical];
 		return nil;
 	}
 	

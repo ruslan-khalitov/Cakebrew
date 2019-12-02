@@ -33,8 +33,8 @@
 	<key>SUEnableSystemProfiling</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://www.cakebrew.com/appcast/profileInfo.php</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<string>https://api.appcenter.ms/v0.1/public/sparkle/apps/41664fb8-8120-41c2-bbf5-7baac6860672</string>
+	<key>SUPublicEDKey</key>
+	<string>gxSeJqYKPDDl8a7LzaJaneLYksNmjSRz6prQKPOJ0hs=</string>
 </dict>
 </plist>
