@@ -1,4 +1,4 @@
-platform :osx, '10.14'
+platform :osx, '10.11'
 
 target 'Cakebrew' do
   use_frameworks!
@@ -27,17 +27,24 @@ plugin 'cocoapods-keys', {
   ]
 }
 
-# post_install do |installer|
-#   installer.aggregate_targets.each do |aggregate_target|
-#     aggregate_target.xcconfigs.each do |config_name, config_file|
-#       # puts config_name
-#       # config_file.attributes.each do |key, value|
-#       #   puts "Key #{key}"
-#       #   puts "Value #{value}"
-#       # end
-#       config_file.attributes['AC_SECRET'] = ENV['AppCenterSecret']
-#       xcconfig_path = aggregate_target.xcconfig_path(config_name)
-#       config_file.save_as(xcconfig_path)
-#     end
-#   end
-# end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'MACOSX_DEPLOYMENT_TARGET'
+    end
+  end
+
+  installer.aggregate_targets.each do |aggregate_target|
+    aggregate_target.xcconfigs.each do |config_name, config_file|
+      puts config_name
+      config_file.attributes.each do |key, value|
+        puts "Key #{key}"
+        puts "Value #{value}"
+      end
+      config_file.attributes['AC_SECRET'] = ENV['AppCenterSecret']
+      xcconfig_path = aggregate_target.xcconfig_path(config_name)
+      config_file.save_as(xcconfig_path)
+    end
+  end
+
+end

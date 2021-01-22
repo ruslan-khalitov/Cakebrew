@@ -60,13 +60,13 @@ NSString *const kBP_HOMEBREW_WEBSITE = @"https://www.cakebrew.com";
 	
 	CakebrewKeys *keys = [[CakebrewKeys alloc] init];
 	
-	if ([keys.appCenterProd isEqualToString:@"No"]) {
-		[MSAppCenter setLogUrl:keys.appCenterLogURL];
+//	if ([keys.appCenterProd isEqualToString:@"No"]) {
+//		[MSAppCenter setLogUrl:keys.appCenterLogURL];
 //		MSDistribute.setApiUrl(keys.appCenterDistributeApi);
 //		MSDistribute.setInstallUrl(keys.appCenterDistributeInstallUrl);
-	}
+//	}
 	
-	[MSAppCenter start:keys.appCenterSecret withServices:@[
+	[MSAppCenter start:@"5051479dca69e18a42e5177b353a0b285735caa7" withServices:@[
 														   [MSAnalytics class],
 														   [MSCrashes class]
 														   ]];
